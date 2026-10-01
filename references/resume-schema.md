@@ -48,7 +48,7 @@ Every section has:
       "header_right": "City, ST, Country",
       "sub_blocks": [
         {
-          "sub_left": "Job Title, Degree, or Project Title",
+          "sub_left": "Job Title or Degree",
           "sub_right": "Month Year – Month Year",
           "bullets": [
             "Led cross-functional team of seven to redesign the onboarding flow.",
@@ -62,11 +62,14 @@ Every section has:
 ```
 
 - `header_left` / `header_right` render bold, on one line, left/right split. This is the
-  organization + location line. **Omit `header_left`** (or leave it `""`) for a project entry that
-  has no separate organization line — in that case put the project title + date directly as the
-  single `sub_blocks` entry's `sub_left`/`sub_right`, and it'll render as the top line instead
-  (still italic, since there's no bold header line above it — that's fine for a lone project entry
-  without a course/context subtitle).
+  organization + location line. **`header_left`/`header_right` are required for every entry,
+  including Project Experience** — they're what renders bold. For a project with no separate
+  organization, put the **project title itself** in `header_left` (bold) and its date in
+  `header_right` (bold); leave `header_right` as `""` only if there's genuinely no date to show,
+  never to work around a missing organization. Do not move a project's title down into a
+  `sub_blocks` entry — that slot always renders italic, so a title placed there silently loses its
+  bold formatting, which is the one thing that visually marks it as a title rather than a detail
+  line.
 - `sub_blocks` is a list so one employer with multiple titles becomes multiple `sub_blocks` under
   one shared `header_left`/`header_right`, instead of repeating the employer. Most entries will
   have exactly one `sub_blocks` item.
@@ -74,6 +77,27 @@ Every section has:
   a project's course/context line that doesn't need a right-aligned date (e.g., a subtitle like
   "BUDT 705, Individual Project (Tableau, Excel)" under a title line that already carries the
   date).
+A standalone project (no organization) looks like this — note the title+date sit in
+`header_left`/`header_right` (bold), and the course/context line goes in `sub_blocks[0].sub_left`
+(italic), not the other way around:
+
+```json
+{
+  "header_left": "Store Performance and Market Analysis – North Peak Coffee",
+  "header_right": "Fall 2026 (In Progress)",
+  "sub_blocks": [
+    {
+      "sub_left": "BUDT 705, Individual Project (Tableau, Excel)",
+      "sub_right": "",
+      "bullets": [
+        "Analyzed ten years of store performance, competitor landscape, and demographic data for a fictional U.S. coffee chain.",
+        "Built a multi-dashboard Tableau Story identifying untapped market opportunity for new store locations."
+      ]
+    }
+  ]
+}
+```
+
 - `bullets` is a flat list of strings. Each becomes its own hyphen-bulleted, justified paragraph.
   Write these using `bullet-writing-framework.md` and `content-rules.md` — don't just take
   dictation.

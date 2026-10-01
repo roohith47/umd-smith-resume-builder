@@ -144,19 +144,27 @@ def add_section_header(doc, heading):
 
 def add_entries_section(doc, section):
     for entry in section.get("entries", []):
-        if entry.get("header_left"):
+        has_header = bool(entry.get("header_left"))
+        if has_header:
             add_two_col_paragraph(
                 doc, entry["header_left"], entry.get("header_right", ""),
                 bold=True, space_after=0,
             )
-        for sub in entry.get("sub_blocks", []):
+        sub_blocks = entry.get("sub_blocks", [])
+        for i, sub in enumerate(sub_blocks):
+            # Safety net: a schema/content mistake can leave header_left empty (e.g. a
+            # standalone project with its title accidentally placed in sub_blocks instead
+            # of header_left -- see references/resume-schema.md). Rather than silently
+            # rendering what should be a bold title in italic, promote the first sub_block
+            # to the bold header style so the title still reads correctly.
+            is_title_line = not has_header and i == 0
             add_two_col_paragraph(
                 doc, sub.get("sub_left", ""), sub.get("sub_right", ""),
-                italic=True, space_after=0,
+                bold=is_title_line, italic=not is_title_line, space_after=0,
             )
             bullets = sub.get("bullets", [])
-            for i, bullet in enumerate(bullets):
-                add_bullet(doc, bullet, space_after=2 if i == len(bullets) - 1 else 0)
+            for j, bullet in enumerate(bullets):
+                add_bullet(doc, bullet, space_after=2 if j == len(bullets) - 1 else 0)
 
 
 def add_skills_section(doc, section):

@@ -5,6 +5,17 @@ laid out on the page. They come from the Smith School of Business Office of Care
 resume guidelines. Apply them to every bullet and line of text you write or edit, regardless of
 which visual template is in play.
 
+## Don't silently drop or compress the candidate's content
+
+When transcribing what a candidate tells you (or an existing resume they paste in) into the
+`resume_data.json`, preserve every substantive detail they gave you — project names, course codes,
+tools, scope, numbers. You're allowed, and expected, to tighten *wording* (action verb, grammar,
+SAR structure per the rest of this file), but that's different from cutting *content* to make
+something fit. If a section genuinely won't fit on one page, say so explicitly and ask the
+candidate what to cut — don't quietly shorten or merge their bullets/details to make the problem
+disappear. A resume that silently lost a project's context line or collapsed two distinct
+accomplishments into one is a worse bug than a resume that's honestly a line too long.
+
 ## Bullet structure (SAR, results-based)
 
 - Every bullet starts with a **past-tense action verb** (see `action-verbs.md`). Use present tense

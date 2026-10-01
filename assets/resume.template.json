@@ -68,12 +68,12 @@
       "type": "entries",
       "entries": [
         {
-          "header_left": "",
-          "header_right": "",
+          "header_left": "Project Title (objective, models, or technology used)",
+          "header_right": "Month Year",
           "sub_blocks": [
             {
-              "sub_left": "Project Title (objective, models, or technology used)",
-              "sub_right": "Month Year",
+              "sub_left": "Course Code, Project Type (e.g. Individual or Team Project)",
+              "sub_right": "",
               "bullets": [
                 "[Context: team size, role, methodology, delivery expectations].",
                 "[Strategic impact of the project, quantified where possible]."
