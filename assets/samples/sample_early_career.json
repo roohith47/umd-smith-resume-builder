@@ -1,0 +1,100 @@
+{
+  "_comment": "FICTIONAL sample resume for demo purposes only -- not a real person, not a template to copy content from. Demonstrates the 'no Work Experience section yet' case from references/visual-spec.md's Adapting Sections guidance: Project Experience is promoted ahead of where Work Experience would normally sit, and Additional Experience and Leadership carries more of the resume's weight.",
+  "name": "Riley Firstyear",
+  "contact_line": "(410) 555-0198 • rfirstyear@umd.edu • linkedin.com/in/rileyfirstyear",
+  "work_auth_line": "",
+  "sections": [
+    {
+      "heading": "EDUCATION",
+      "type": "entries",
+      "entries": [
+        {
+          "header_left": "University of Maryland, Robert H. Smith School of Business",
+          "header_right": "College Park, MD, USA",
+          "sub_blocks": [
+            {
+              "sub_left": "Master of Science in Information Systems",
+              "sub_right": "August 2026 – May 2028",
+              "bullets": [
+                "Coursework: Database Management, Business Process Innovation, Data Visualization."
+              ]
+            }
+          ]
+        },
+        {
+          "header_left": "University of Delaware",
+          "header_right": "Newark, DE, USA",
+          "sub_blocks": [
+            {
+              "sub_left": "Bachelor of Arts, Major: Communication, GPA: 3.4",
+              "sub_right": "August 2022 – May 2026",
+              "bullets": [
+                "Dean's List, four semesters."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "TECHNICAL SKILLS",
+      "type": "skills",
+      "lines": [
+        {
+          "label": "Languages and Tools",
+          "items": "SQL, Tableau, MS Excel (Advanced), Microsoft Suite"
+        }
+      ]
+    },
+    {
+      "heading": "PROJECT EXPERIENCE",
+      "type": "entries",
+      "entries": [
+        {
+          "header_left": "Nonprofit Volunteer Scheduling Database",
+          "header_right": "Fall 2026",
+          "sub_blocks": [
+            {
+              "sub_left": "BMGT 402, Individual Project (SQL, Excel)",
+              "sub_right": "",
+              "bullets": [
+                "Designed a relational database to replace a local food bank's paper volunteer sign-up process, covering 40 weekly shift slots across three locations.",
+                "Built an Excel dashboard summarizing shift coverage gaps, which the food bank adopted for its fall scheduling cycle."
+              ]
+            }
+          ]
+        },
+        {
+          "header_left": "Campus Dining Satisfaction Survey Analysis",
+          "header_right": "Spring 2026",
+          "sub_blocks": [
+            {
+              "sub_left": "COMM 410, Team Project (Excel, Tableau)",
+              "sub_right": "",
+              "bullets": [
+                "Analyzed survey responses from over 300 students to identify the three dining locations with the lowest satisfaction scores.",
+                "Presented recommendations to the campus dining advisory board, two of which were adopted for the following semester."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "ADDITIONAL EXPERIENCE AND LEADERSHIP",
+      "type": "bullets",
+      "bullets": [
+        "University of Delaware Student Government Association, Communications Director (August 2024 – May 2026): managed weekly email updates and social media reaching over 2,000 students.",
+        "Campus Pantry, Volunteer Coordinator (September 2023 – May 2026): scheduled 25 weekly volunteer shifts and recruited 15 new volunteers per semester.",
+        "Orientation Peer Mentor, University of Delaware (Summer 2025): guided groups of 20 incoming first-year students through academic planning sessions."
+      ]
+    },
+    {
+      "heading": "DISTINCTIONS",
+      "type": "bullets",
+      "bullets": [
+        "Interests: photography, community theater, hiking."
+      ]
+    }
+  ]
+}

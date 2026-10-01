@@ -27,17 +27,41 @@ won't need to re-read it on every single bullet edit within the same session.
 
 ## Core workflow
 
-1. **Find or create the content source file.** This skill is driven by a JSON file (see
+1. **Run a short intake conversation before building anything**, unless the user already has a
+   resume data JSON from a previous session (in which case skip to step 2 and treat this as an
+   update, not a fresh build). People show up at very different career stages, and the section set
+   from `visual-spec.md`'s default order won't fit everyone — a first-year student with no
+   internships yet needs a different resume shape than someone with three years of relevant work
+   experience, and building either one toward the generic six-section template produces a worse
+   result than asking first. Cover, conversationally (not as a rigid form):
+   - What career stage/situation are they in, and what role or industry are they targeting?
+   - Do they have professional work experience (internships, jobs) relevant to that target? If
+     not, that's completely fine — say so and move on, don't treat it as a gap to paper over.
+   - Do they have academic, personal, or case-competition projects worth featuring?
+   - Any leadership, volunteer, or club involvement, research experience, or certifications?
+   - Do they have a specific job posting to tailor toward, or is this a general-purpose draft?
+
+   Use the answers to decide the actual section list and order per `visual-spec.md`'s "Adapting
+   sections to the candidate" — drop sections with nothing in them, reorder Work vs. Project
+   Experience based on which is the stronger evidence, lean on Education/Leadership for someone
+   with neither, and suggest a non-standard section if that represents them better than forcing
+   their story into the default six. Tell them what you decided and why.
+
+2. **Find or create the content source file.** This skill is driven by a JSON file (see
    `references/resume-schema.md` for the schema) rather than a Word file you hand-edit directly —
    regenerating from structured data is what keeps the formatting correct every time.
    - If the user already has a resume data JSON for this skill (ask, or check common places like
      `~/Desktop/Resumes/` or wherever they keep resume files), use that.
-   - If this is their first time, copy `assets/resume.template.json` as the starting point and
-     interview the user to replace every placeholder with their real information — don't leave
-     bracketed placeholders in the final file, and don't fabricate specifics (companies, dates,
-     numbers) they haven't given you.
+   - Otherwise, build a fresh JSON shaped by what the intake conversation told you — don't start
+     from `assets/resume.template.json`'s full six-section skeleton and leave placeholders in
+     sections the user has nothing for. (`assets/resume.template.json` is still useful as a
+     field-level reference for what each section's shape looks like, and
+     `assets/samples/` has two fully fictional, fully populated example resumes at different career
+     stages if you want to see the schema and the "adapting sections" guidance applied end to end —
+     just don't hand either to a user as their own starting content.)
+   - Never fabricate specifics (companies, dates, numbers) the user hasn't given you.
 
-2. **Gather or update content.**
+3. **Gather or update content.**
    - If the user is adding a new role/project/award: ask what's missing to run the SAR method from
      `references/bullet-writing-framework.md` (situation, action, result), unless they've already
      given you enough to work with.
@@ -49,17 +73,15 @@ won't need to re-read it on every single bullet edit within the same session.
    - If they just want a general refresh: review the existing JSON for weak bullets (responsibility
      only, no result, no verb) and propose stronger versions using the three-stage pattern.
 
-3. **Apply the writing standards** in `references/content-rules.md` to every piece of text you
+4. **Apply the writing standards** in `references/content-rules.md` to every piece of text you
    write or touch: action-verb-first bullets (pull from `references/action-verbs.md` when you need
    a fresh one), SAR structure, quantified results, grammar/number/abbreviation rules, and the
    one-page constraint. These are content rules, not visual ones — they apply regardless of
    template, so don't skip them just because the visual side is handled by the script.
 
-4. **Edit the JSON file directly** (it's just a text file — use your normal file-editing tools).
-   Keep the section order from `visual-spec.md` unless the user's situation calls for swapping
-   Work Experience and Project Experience (that section explains exactly when).
+5. **Edit the JSON file directly** (it's just a text file — use your normal file-editing tools).
 
-5. **Render it:**
+6. **Render it:**
    ```bash
    python3 scripts/build_resume.py path/to/resume_data.json path/to/output.docx
    ```
@@ -68,7 +90,7 @@ won't need to re-read it on every single bullet edit within the same session.
    runs long, cut the least-relevant bullet rather than shrinking fonts/margins below spec (shrinking
    is a last resort the user would need to explicitly ask for).
 
-6. **Tell the user what changed and where the file landed**, and remind them to open the `.docx`
+7. **Tell the user what changed and where the file landed**, and remind them to open the `.docx`
    and eyeball the one-page fit themselves — the script's estimate is a heuristic, not a substitute
    for looking at it (see the "One-page check" note in `visual-spec.md`).
 
@@ -84,8 +106,14 @@ won't need to re-read it on every single bullet edit within the same session.
 - `references/bullet-writing-framework.md` — the SAR elicitation method and the three-stage
   bullet-strengthening pattern. Read this before drafting any new bullet from scratch.
 - `references/action-verbs.md` — a bank of past-tense action verbs to open bullets with.
-- `assets/resume.template.json` — a blank placeholder resume, structurally correct but with no
-  real content. Copy this for a brand-new user; never substitute someone else's real resume data.
+- `assets/resume.template.json` — a field-level reference for each section's shape. Don't copy it
+  wholesale into a new user's file (it has all six sections; most users won't need all six) — use
+  it to see the expected fields, then build only the sections the intake conversation calls for.
+- `assets/samples/` — two fully fictional, fully populated example resumes at different career
+  stages (one with solid work experience, one early-career with no professional experience yet),
+  demonstrating the "Adapting sections to the candidate" guidance end to end. Useful for showing
+  someone what this skill produces, or as a reference for section shape — never as a source of
+  real content for an actual user's resume.
 
 ## Things to get right
 
@@ -95,9 +123,12 @@ won't need to re-read it on every single bullet edit within the same session.
   digits, except money and percentages which are always digits.
 - Degree names spelled out ("Master of Science," not "MS"); GPA and GMAT are the only acronyms
   allowed unspelled; state/country abbreviations are the only abbreviations allowed at all.
-- Don't silently add a Projects section, a Certifications section, or reorder sections without
-  saying why — mention the reasoning (e.g., "I moved Project Experience above Work Experience since
-  this is for an internship search and your fieldwork is thinner than your coursework projects").
+- Don't render a section with nothing in it (an empty Work Experience header is worse than no
+  header), and don't silently add, drop, or reorder a section without saying why — mention the
+  reasoning (e.g., "I moved Project Experience above Work Experience since this is for an
+  internship search and your fieldwork is thinner than your coursework projects," or "I left out
+  Work Experience entirely since you don't have any yet — we're leaning on your projects and
+  leadership roles instead").
 - If the user asks for something that contradicts a content rule (e.g., "just put MS instead of
   spelling it out"), it's their resume — make the change, but mention you're deviating from the
   Smith OCS content standard so they're making an informed call, not quietly diverging from a

@@ -45,14 +45,45 @@ Smith OCS guidelines in `content-rules.md`. Only the *visual* template changed.
 - A thin bottom border/rule under the heading text helps separate sections visually (matches the
   official template's "1-point border" convention) — the build script adds this automatically.
 - Canonical default order: EDUCATION → TECHNICAL SKILLS → WORK EXPERIENCE → PROJECT EXPERIENCE →
-  ADDITIONAL EXPERIENCE AND LEADERSHIP → DISTINCTIONS. A CERTIFICATIONS section can be inserted
-  after Technical Skills if the candidate has certifications worth calling out separately.
-  - **When to reorder:** if the candidate has little or no relevant professional work experience
-    relative to their project work (e.g., an early-career pivot, or a target role where projects
-    are the strongest evidence), move Project Experience ahead of Work Experience. The Smith OCS
-    rationale for Project Experience existing at all is specifically to compensate for thin work
-    experience — so let that same logic decide the ordering. Default to Work Experience first
-    whenever the candidate has solid, relevant professional roles.
+  ADDITIONAL EXPERIENCE AND LEADERSHIP → DISTINCTIONS. This is a starting point, not a mandate —
+  see "Adapting sections to the candidate" below for how and when to depart from it.
+
+## Adapting sections to the candidate
+
+The six-section default assumes a candidate with both solid work experience and project work to
+show. Most candidates don't fit that cleanly — a first-year student may have neither; an
+experienced career-changer may have strong work experience in a different field and nothing
+relevant to show as a "project." Treat the section list as something you assemble per candidate
+during the intake conversation (see SKILL.md's "Core workflow"), not a template you fill in
+unconditionally. A few concrete rules:
+
+- **Never render a section with nothing in it.** An empty "WORK EXPERIENCE" header looks worse
+  than no header at all — it visually advertises the gap instead of just not drawing attention to
+  it. If a candidate has no professional work experience yet, drop the section entirely rather than
+  leaving it empty or writing filler.
+- **Reorder Work Experience vs. Project Experience based on which one is the stronger evidence.**
+  If the candidate has little or no relevant professional work experience relative to their project
+  work (an early-career pivot, or a target role where projects are the strongest evidence), move
+  Project Experience ahead of Work Experience, or drop Work Experience altogether. The Smith OCS
+  rationale for Project Experience existing at all is specifically to compensate for thin work
+  experience — let that same logic decide both the ordering and whether to include each section.
+- **When someone has neither solid work experience nor a standout project**, lean harder on
+  Education (relevant coursework, GPA if strong, case competitions) and Additional Experience and
+  Leadership (clubs, volunteer work, campus involvement) — these become the primary evidence
+  sections rather than the supporting ones. It's fine, and often better, for a candidate's first
+  resume to be four sections long instead of six.
+- **Suggest a non-standard section when it genuinely represents the candidate better than forcing
+  their content into one of the six defaults.** Smith OCS's own Distinctions section already
+  absorbs "whatever doesn't fit elsewhere" (languages, publications, hobbies) — if a candidate has
+  enough of one kind of distinct content to warrant its own heading (a "RESEARCH EXPERIENCE"
+  section for someone with multiple research stints, a "CERTIFICATIONS" section pulled out of
+  Technical Skills, an "ACTIVITIES" section for a candidate whose main story is campus
+  involvement), it's fine to add it. Use the same visual template (bold header with bottom border,
+  then either the `entries` or `bullets` section type) — the schema isn't limited to the six named
+  headings in the default order, those are just the common cases.
+- **Say what you changed and why**, briefly — the candidate should understand that their resume
+  doesn't have a Work Experience section because you made a deliberate call based on what they told
+  you, not because something broke.
 
 ## Two-line entry blocks (education, work experience, project experience)
 

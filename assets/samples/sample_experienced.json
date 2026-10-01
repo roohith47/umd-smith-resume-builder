@@ -1,0 +1,120 @@
+{
+  "_comment": "FICTIONAL sample resume for demo purposes only -- not a real person, not a template to copy content from.",
+  "name": "Priya Datapoint",
+  "contact_line": "(301) 555-0142 • pdatapoint@umd.edu • linkedin.com/in/priyadatapoint",
+  "work_auth_line": "Permanent U.S. Work Authorization",
+  "sections": [
+    {
+      "heading": "EDUCATION",
+      "type": "entries",
+      "entries": [
+        {
+          "header_left": "University of Maryland, Robert H. Smith School of Business",
+          "header_right": "College Park, MD, USA",
+          "sub_blocks": [
+            {
+              "sub_left": "Master of Science in Business Analytics, GPA: 3.7",
+              "sub_right": "August 2025 – May 2027",
+              "bullets": [
+                "Coursework: Predictive Modeling, Marketing Analytics, Database Management, Optimization."
+              ]
+            }
+          ]
+        },
+        {
+          "header_left": "University of Pittsburgh",
+          "header_right": "Pittsburgh, PA, USA",
+          "sub_blocks": [
+            {
+              "sub_left": "Bachelor of Science, Major: Economics, GPA: 3.6",
+              "sub_right": "August 2020 – May 2024",
+              "bullets": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "TECHNICAL SKILLS",
+      "type": "skills",
+      "lines": [
+        {
+          "label": "Languages and Tools",
+          "items": "Python (pandas, scikit-learn), SQL, R, Tableau, Power BI"
+        }
+      ]
+    },
+    {
+      "heading": "WORK EXPERIENCE",
+      "type": "entries",
+      "entries": [
+        {
+          "header_left": "Beacon Retail Analytics",
+          "header_right": "Pittsburgh, PA, USA",
+          "sub_blocks": [
+            {
+              "sub_left": "Data Analyst Intern",
+              "sub_right": "June 2026 – August 2026",
+              "bullets": [
+                "Built a customer segmentation model in Python using k-means clustering, enabling the marketing team to target four distinct shopper groups and raising email campaign click-through rates by 18%.",
+                "Automated a weekly sales-reporting pipeline with SQL and Power BI, cutting the analyst team's reporting time from six hours to 45 minutes per week.",
+                "Presented findings on seasonal demand patterns to a group of 15 regional managers, informing inventory allocation for the holiday season."
+              ]
+            }
+          ]
+        },
+        {
+          "header_left": "Pittsburgh Metro Transit Authority",
+          "header_right": "Pittsburgh, PA, USA",
+          "sub_blocks": [
+            {
+              "sub_left": "Operations Research Intern",
+              "sub_right": "May 2025 – August 2025",
+              "bullets": [
+                "Analyzed three years of ridership data to identify five bus routes with the lowest on-time performance.",
+                "Recommended schedule adjustments that were adopted on two pilot routes, improving on-time arrivals by 12%."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "PROJECT EXPERIENCE",
+      "type": "entries",
+      "entries": [
+        {
+          "header_left": "Customer Churn Prediction Model",
+          "header_right": "Spring 2026",
+          "sub_blocks": [
+            {
+              "sub_left": "BUDT 758, Team Project (Python, scikit-learn, Tableau)",
+              "sub_right": "",
+              "bullets": [
+                "Led a team of four to build a gradient-boosted classifier predicting subscription churn for a simulated telecom dataset of 50,000 customers.",
+                "Achieved 84% recall on the churn class and presented a retention-targeting dashboard to a panel of three faculty judges, placing second out of 14 teams."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "ADDITIONAL EXPERIENCE AND LEADERSHIP",
+      "type": "bullets",
+      "bullets": [
+        "Graduate Business Analytics Club, Events Chair (September 2025 – Present): organized six employer networking events for over 100 students, coordinating with eight corporate sponsors.",
+        "Big Brothers Big Sisters of Pittsburgh, Volunteer Mentor (January 2023 – May 2024): mentored two high school students weekly on college and career planning."
+      ]
+    },
+    {
+      "heading": "DISTINCTIONS",
+      "type": "bullets",
+      "bullets": [
+        "Smith School Dean's Fellowship ($10,000), awarded for academic merit.",
+        "Languages: conversational Hindi.",
+        "Interests: distance running, chess."
+      ]
+    }
+  ]
+}
