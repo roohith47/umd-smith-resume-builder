@@ -1,0 +1,102 @@
+{
+  "name": "Full Name",
+  "contact_line": "(XXX) XXX-XXXX • email@school.edu • linkedin.com/in/handle",
+  "work_auth_line": "",
+  "sections": [
+    {
+      "heading": "EDUCATION",
+      "type": "entries",
+      "entries": [
+        {
+          "header_left": "University Name, School of Business",
+          "header_right": "City, ST, Country",
+          "sub_blocks": [
+            {
+              "sub_left": "Master of [Degree], GPA (if 3.5 or above)",
+              "sub_right": "Month Year – Month Year",
+              "bullets": [
+                "Coursework: [relevant course], [relevant course], [relevant course]."
+              ]
+            }
+          ]
+        },
+        {
+          "header_left": "Undergraduate Institution Name",
+          "header_right": "City, ST, Country",
+          "sub_blocks": [
+            {
+              "sub_left": "Bachelor of [Degree], Major: [Major], GPA (if 3.5 or above)",
+              "sub_right": "Month Year – Month Year",
+              "bullets": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "TECHNICAL SKILLS",
+      "type": "skills",
+      "lines": [
+        {
+          "label": "Languages and Tools",
+          "items": "[tool], [tool], [programming language], [programming language]"
+        }
+      ]
+    },
+    {
+      "heading": "WORK EXPERIENCE",
+      "type": "entries",
+      "entries": [
+        {
+          "header_left": "Full Company Name (most recent)",
+          "header_right": "City, ST, Country",
+          "sub_blocks": [
+            {
+              "sub_left": "Job Title",
+              "sub_right": "Month Year – Month Year",
+              "bullets": [
+                "[Past-tense action verb] [what you did], resulting in [quantified result].",
+                "[Past-tense action verb] [what you did], resulting in [quantified result]."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "PROJECT EXPERIENCE",
+      "type": "entries",
+      "entries": [
+        {
+          "header_left": "",
+          "header_right": "",
+          "sub_blocks": [
+            {
+              "sub_left": "Project Title (objective, models, or technology used)",
+              "sub_right": "Month Year",
+              "bullets": [
+                "[Context: team size, role, methodology, delivery expectations].",
+                "[Strategic impact of the project, quantified where possible]."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "ADDITIONAL EXPERIENCE AND LEADERSHIP",
+      "type": "bullets",
+      "bullets": [
+        "Role, Organization (Month Year – Month Year): [one-line description of the role and its outcome]."
+      ]
+    },
+    {
+      "heading": "DISTINCTIONS",
+      "type": "bullets",
+      "bullets": [
+        "Languages: [language] (fluent), [language] (conversational).",
+        "Interests: [interest], [interest]."
+      ]
+    }
+  ]
+}
